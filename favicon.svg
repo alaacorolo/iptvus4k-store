@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background -->
+  <rect width="512" height="512" rx="128" fill="#0a0b10"/>
+  <!-- TV Frame -->
+  <rect x="80" y="96" width="352" height="256" rx="32" fill="none" stroke="url(#grad)" stroke-width="32"/>
+  <!-- TV Stand -->
+  <path d="M224 352L208 416H304L288 352H224Z" fill="url(#grad)"/>
+  <rect x="176" y="416" width="160" height="16" rx="8" fill="url(#grad)"/>
+  <!-- Play symbol inside TV -->
+  <path d="M224 176V272L304 224L224 176Z" fill="#00f2fe"/>
+</svg>

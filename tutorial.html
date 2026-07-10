@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How to Setup IPTV on Firestick, Smart TV, Android & iOS | IPTV USA 4K Store</title>
+  <meta name="description" content="Step-by-step tutorial guides to set up your IPTV USA 4K subscription. Easy configuration instructions for Amazon Firestick, Smart TVs, Android, Apple TV, and MAG Box.">
+  <meta name="keywords" content="IPTV setup Firestick, IPTV Smarters setup, TiviMate tutorial, connect IPTV Smart TV, install IPTV box">
+  <link rel="canonical" href="https://iptvus4k.store/tutorial">
+
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <meta name="theme-color" content="#0a0b10">
+  <meta name="google-site-verification" content="KniCInKHFQUO52H2_fMIKPh_IWMcHitKmDxqsToF7PE" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom styling for tutorial tabs & steps -->
+  <style>
+    .tutorial-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+    .tutorial-sidebar {
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+    }
+    .tutorial-nav-btn {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+      padding: 1.25rem 1.5rem;
+      border-radius: var(--border-radius-sm);
+      text-align: left;
+      font-weight: 600;
+      color: var(--color-text-secondary);
+      background: rgba(255, 255, 255, 0.01);
+      margin-bottom: 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      transition: all var(--transition-fast);
+    }
+    .tutorial-nav-btn:hover, .tutorial-nav-btn.active {
+      color: var(--color-text-primary);
+      background: rgba(0, 242, 254, 0.05);
+      border-color: rgba(0, 242, 254, 0.2);
+    }
+    .tutorial-nav-btn.active {
+      border-left: 4px solid var(--primary);
+    }
+    .tutorial-nav-btn i {
+      font-size: 1.25rem;
+    }
+    .tutorial-content-block {
+      display: none;
+      animation: fadeIn 0.4s ease-out forwards;
+    }
+    .tutorial-content-block.active {
+      display: block;
+    }
+    .step-list {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    .step-item {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .step-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--gradient-primary);
+      color: #000;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .step-text {
+      padding-top: 0.25rem;
+    }
+    .step-text h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .alert-info-box {
+      background: rgba(139, 92, 246, 0.1);
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem;
+      border-radius: var(--border-radius-sm);
+      margin-top: 2rem;
+    }
+    @media (max-width: 900px) {
+      .tutorial-grid {
+        grid-template-columns: 1fr;
+      }
+      .tutorial-sidebar {
+        position: relative;
+        top: 0;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://iptvus4k.store/tutorial#webpage",
+    "url": "https://iptvus4k.store/tutorial",
+    "name": "How to Setup IPTV on Firestick, Smart TV, Android & iOS | IPTV USA 4K Store",
+    "description": "Step-by-step tutorial guides to set up your IPTV USA 4K subscription. Easy configuration instructions for Amazon Firestick, Smart TVs, Android, Apple TV, and MAG Box.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://iptvus4k.store/#website"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header Component -->
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo" id="logo">
+        <i class="fa-solid fa-tv"></i> IPTV<span>USA4K</span>
+      </a>
+      <nav class="nav-links" id="navMenu">
+        <a href="/" class="nav-link" id="navHome">Home</a>
+        <a href="/subscription" class="nav-link" id="navSubscription">Subscription</a>
+        <a href="/faq" class="nav-link" id="navFaq">FAQ</a>
+        <a href="/tutorial" class="nav-link active" id="navTutorial">Tutorial</a>
+        <a href="#subscribe" class="btn btn-primary btn-sm" style="padding: 0.5rem 1.25rem;" id="navCta">Get Started</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle Menu" aria-expanded="false" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main id="content">
+    
+    <!-- Hero / Breadcrumb Header -->
+    <section class="section-padding" style="padding-bottom: 2rem; text-align: center; position: relative;">
+      <div class="hero-bg"></div>
+      <div class="container" style="padding-top: 3rem;">
+        <h1 class="text-gradient" style="font-size: 2.75rem; margin-bottom: 1rem;">IPTV Setup & Installation Guides</h1>
+        <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">Configure your IPTV USA subscription in less than 5 minutes. Select your device below for tailored step-by-step instructions.</p>
+      </div>
+    </section>
+
+    <!-- Main Tutorial Interface -->
+    <section class="container" style="padding-bottom: 7rem;">
+      <div class="tutorial-grid">
+        
+        <!-- Device Selection Sidebar -->
+        <aside class="tutorial-sidebar" aria-label="Device Selector">
+          <button class="tutorial-nav-btn active" data-device="firestick" id="btnSelectFirestick">
+            <i class="fa-brands fa-amazon"></i> Fire TV Stick
+          </button>
+          <button class="tutorial-nav-btn" data-device="smarttv" id="btnSelectSmartTv">
+            <i class="fa-solid fa-tv"></i> Smart TV (Samsung/LG)
+          </button>
+          <button class="tutorial-nav-btn" data-device="android" id="btnSelectAndroid">
+            <i class="fa-brands fa-android"></i> Android TV & Mobile
+          </button>
+          <button class="tutorial-nav-btn" data-device="apple" id="btnSelectApple">
+            <i class="fa-brands fa-apple"></i> Apple TV, iOS & Mac
+          </button>
+        </aside>
+
+        <!-- Tutorial Steps Content -->
+        <article class="tutorial-content" aria-label="Setup Instructions">
+          
+          <!-- Firestick Tutorial -->
+          <div class="tutorial-content-block active" id="content-firestick">
+            <h2>Amazon Firestick IPTV Setup Guide</h2>
+            <p>Setting up your IPTV USA subscription on an Amazon Fire TV Stick is best done using the **TiviMate Player** or **IPTV Smarters Pro** app. Follow these easy steps:</p>
+            
+            <div class="step-list">
+              <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                  <h4>Install the Downloader App</h4>
+                  <p>From your Firestick Home Screen, go to the <strong>Find</strong> menu, click <strong>Search</strong>, type "Downloader", and download/install the app (orange icon).</p>
+                </div>
+              </div>
+              
+              <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                  <h4>Enable Apps from Unknown Sources</h4>
+                  <p>Go to your Firestick <strong>Settings</strong> > <strong>My Fire TV</strong> > <strong>Developer Options</strong>. Turn on <strong>Install Unknown Apps</strong> for the Downloader app. *(If Developer Options is hidden, go to About and click your Fire TV Stick name 7 times rapidly to unlock it)*.</p>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                  <h4>Download IPTV Smarters Pro</h4>
+                  <p>Open Downloader, enter the direct download code `78522` (or type `smarters` link) to download the IPTV Smarters APK. Click Install once the download completes.</p>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-text">
+                  <h4>Enter Your IPTV USA 4K Credentials</h4>
+                  <p>Open the app, select <strong>Login with Xtream Codes API</strong>, and input the connection details we sent to your email/WhatsApp (Username, Password, and Server Portal URL). Click **Add User** and enjoy your channels!</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="alert-info-box">
+              <strong>Need a different app?</strong> TiviMate is highly recommended for an premium cable-like TV Guide interface. You can download it through Downloader using code `272483` and enter your M3U playlist link to start streaming.
+            </div>
+          </div>
+
+          <!-- Smart TV Tutorial -->
+          <div class="tutorial-content-block" id="content-smarttv">
+            <h2>Smart TV IPTV Setup Guide (Samsung & LG)</h2>
+            <p>For Samsung and LG Smart TVs, we recommend using the **IBO Player** or **Smart IPTV** app directly from the TV's official App Store.</p>
+            
+            <div class="step-list">
+              <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                  <h4>Search for IBO Player</h4>
+                  <p>Open your TV's App Store (Samsung Smart Hub or LG Content Store), search for <strong>IBO Player</strong>, and install it.</p>
+                </div>
+              </div>
+              
+              <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                  <h4>Retrieve Your TV MAC Address</h4>
+                  <p>Launch the IBO Player app on your TV. You will see a screen showing your <strong>Device MAC Address</strong> and <strong>Device Key</strong>. Note these down.</p>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                  <h4>Upload Your Playlist Link</h4>
+                  <p>Go to the IBO Player portal (`https://iboplayer.com/device/login`) on your phone or PC. Enter your MAC Address and Device Key, then paste the M3U Playlist Link provided in your subscription email.</p>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-text">
+                  <h4>Restart Your TV App</h4>
+                  <p>Go back to your Smart TV, reload the IBO Player application, and all live TV categories and movies will be ready to stream.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Android Tutorial -->
+          <div class="tutorial-content-block" id="content-android">
+            <h2>Android TV & Mobile IPTV Setup Guide</h2>
+            <p>Android boxes, Nvidia Shield, and Android smartphones have native access to premium IPTV players directly through the Google Play Store.</p>
+            
+            <div class="step-list">
+              <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                  <h4>Download IPTV Smarters Pro</h4>
+                  <p>Open the Google Play Store on your Android box or phone, search for <strong>IPTV Smarters Pro</strong> (or **XCIPTV**), and download it.</p>
+                </div>
+              </div>
+              
+              <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                  <h4>Open and Choose Connection Option</h4>
+                  <p>Launch the app and click on <strong>Login with Xtream Codes API</strong> (the most stable connection method).</p>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                  <h4>Fill in Your Xtream Codes Data</h4>
+                  <p>Enter the Username, Password, and Server Portal URL sent to you when you bought your plan. Click **Add User**.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Apple Tutorial -->
+          <div class="tutorial-content-block" id="content-apple">
+            <h2>Apple TV, iPad & iPhone IPTV Setup Guide</h2>
+            <p>For iOS and Apple TV platforms, we recommend **IPTV Smarters Pro** or the premium **Smarters Player Lite** application available on the App Store.</p>
+            
+            <div class="step-list">
+              <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                  <h4>Download Smarters Player Lite</h4>
+                  <p>Open the Apple App Store, search for <strong>Smarters Player Lite</strong> (or **IPTV Smarters Pro**), and download it to your device.</p>
+                </div>
+              </div>
+              
+              <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                  <h4>Login with Xtream Codes API</h4>
+                  <p>Open the app, accept the terms, select the option to load playlist via <strong>Xtream Codes API</strong>, and enter your login details.</p>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                  <h4>Load and Watch</h4>
+                  <p>Click Login. Wait a few seconds for the app to sync with our servers and load the live channels database. Happy viewing!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Component -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <a href="/" class="logo" style="margin-bottom: 1.5rem;" id="footerLogo">
+            <i class="fa-solid fa-tv"></i> IPTV<span>USA4K</span>
+          </a>
+          <p>We provide the most stable, premium 4K IPTV USA service in the world. Access over 60,000 live global channels and movies today.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h5>Quick Links</h5>
+          <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="/subscription">Pricing Plans</a>
+            <a href="/faq">Help & FAQ</a>
+            <a href="/tutorial">Installation Guides</a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h5>Compatible Apps</h5>
+          <div class="footer-links">
+            <a href="/tutorial#tivimate">TiviMate Player</a>
+            <a href="/tutorial#iptvsmarters">IPTV Smarters Pro</a>
+            <a href="/tutorial#iboplayer">IBO Player</a>
+            <a href="/tutorial#smartiptv">Smart IPTV</a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h5>Contact Support</h5>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>support@iptvus4k.store</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp Live Support Available 24/7</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 IPTV USA 4K Store. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Refund Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <!-- Simple script to handle side tabs switching on the tutorial page -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabButtons = document.querySelectorAll('.tutorial-nav-btn');
+      const contentBlocks = document.querySelectorAll('.tutorial-content-block');
+
+      if(tabButtons.length === 0 || contentBlocks.length === 0) return;
+
+      tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          tabButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+
+          const device = button.getAttribute('data-device');
+          contentBlocks.forEach(block => {
+            if (block.getAttribute('id') === 'content-' + device) {
+              block.classList.add('active');
+            } else {
+              block.classList.remove('active');
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
